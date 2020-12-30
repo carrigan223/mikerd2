@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: "mma-site",
+    title: "McCarron Auto",
+    description: "The Berskhires most dependable stop for auto care",
   },
   plugins: [
     "gatsby-plugin-emotion",
+    "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
@@ -24,6 +26,13 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Racing Sans One`, `Oswald`],
+        display: "swap",
+      },
     },
   ],
 };
