@@ -68,7 +68,7 @@ const Hero = () => {
   `);
 
   return (
-    <ImageContainer fluid className="d-block">
+    <ImageContainer fluid>
       <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
         <Row>
           <Col>
