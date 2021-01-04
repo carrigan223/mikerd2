@@ -3,7 +3,6 @@ import { Global, css } from "@emotion/react"; //emotion/core was renamed emotion
 import Helmet from "react-helmet";
 import Header from "./header";
 
-
 const Layout = ({ children }) => {
   return (
     <>

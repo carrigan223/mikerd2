@@ -51,30 +51,41 @@ const IndexPage = () => {
     }
   `);
   return (
-    <Layout>
-      <Hero />
-      <Container fluid>
-        <Row>
-          <Col
-            css={css`
-              background-color: black;
-            `}
-          >
-            <ContainerOne>Hello world </ContainerOne>
-            <ContainerOne />
-          </Col>
-          <Col>
-            <ContainerTwo>
-              <ImageBackground
-                Tag="section"
-                fluid={image.sharp.fluid}
-                fadeIn="soft"
-              ><h1>Hello world</h1></ImageBackground>
-            </ContainerTwo>
-          </Col>
-        </Row>
-      </Container>
-    </Layout>
+    <>
+      <Layout>
+        <Hero />
+        <Container fluid>
+          <Row>
+            <Col
+              css={css`
+                background-color: black;
+              `}
+            >
+              <ContainerOne>Hello world </ContainerOne>
+              <ContainerOne />
+            </Col>
+            <Col>
+              <ContainerTwo>
+                <ImageBackground
+                  Tag="section"
+                  fluid={image.sharp.fluid}
+                  fadeIn="soft"
+                >
+                  <h1
+                    css={css`
+                      color: white;
+                      text-shadow: 2px 2px 5px blue;
+                    `}
+                  >
+                    Hello world
+                  </h1>
+                </ImageBackground>
+              </ContainerTwo>
+            </Col>
+          </Row>
+        </Container>
+      </Layout>
+    </>
   );
 };
 

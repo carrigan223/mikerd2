@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { graphql, useStaticQuery } from "gatsby";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
 import BackgroundImage from "gatsby-background-image";
 
 const ImageBackground = styled(BackgroundImage)`
@@ -27,7 +27,7 @@ const TextBox = styled("div")`
   align-items: center;
   max-width: 100vw;
   margin-left: 1rem;
-  padding-top: 3rem;
+  padding-top: 3;
 
   h1 {
     text-shadow: 5px 1px 3px black;
@@ -70,15 +70,13 @@ const Hero = () => {
   return (
     <ImageContainer fluid>
       <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
-        <Row>
-          <Col>
-            <TextBox>
-              <h1>McCarron Auto</h1>
-              <h3>The Berskhires most trusted source for auto repairs</h3>
-            </TextBox>
-          </Col>
-        </Row>
-      </ImageBackground>{" "}
+        <Col>
+          <TextBox>
+            <h1>McCarron Auto</h1>
+            <h3>The Berskhires most trusted source for auto repairs</h3>
+          </TextBox>
+        </Col>
+      </ImageBackground>
     </ImageContainer>
   );
 };
