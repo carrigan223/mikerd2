@@ -25,9 +25,9 @@ const TextBox = styled("div")`
   height: 100%;
   justify-content: flex-start;
   align-items: center;
-  //padding: 0 calc((100vw - 550px) / 2) 2rem;
   max-width: 100vw;
   margin-left: 1rem;
+  padding-top: 3rem;
 
   h1 {
     text-shadow: 5px 1px 3px black;
@@ -40,7 +40,7 @@ const TextBox = styled("div")`
   h3 {
     color: red;
     font-family: "Oswald";
-    text-shadow: 5px 1px 3px black;
+    text-shadow: 2px 2px 5px black;
   }
 
   p,
