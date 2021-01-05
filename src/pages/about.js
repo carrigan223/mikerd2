@@ -5,6 +5,24 @@ const AboutPage = () => {
   return (
     <Layout>
       <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+      <div>About</div>
+
     </Layout>
   );
 };
