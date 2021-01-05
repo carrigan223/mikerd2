@@ -59,6 +59,7 @@ const IndexPage = () => {
             <Col
               css={css`
                 background-color: black;
+                background-image: linear-gradient(to bottom, black, white);
               `}
             >
               <ContainerOne>Hello world </ContainerOne>
