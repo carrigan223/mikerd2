@@ -62,7 +62,7 @@ const IndexPage = () => {
                 background-image: linear-gradient(to bottom, black, white);
               `}
             >
-              <ContainerOne>Hello world </ContainerOne>
+              <ContainerOne>Hello world! </ContainerOne>
               <ContainerOne />
             </Col>
             <Col>
