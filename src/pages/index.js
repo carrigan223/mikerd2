@@ -52,8 +52,10 @@ const IndexPage = () => {
   `);
   return (
     <>
-      <Layout>
+      <div className="d-none d-sm-block">
         <Hero />
+      </div>
+      <Layout>
         <Container fluid>
           <Row>
             <Col
