@@ -36,11 +36,11 @@ const ButtonContainer = styled(Row)`
 const ContactForm = () => {
   return (
     <FormContainer>
-      <Form>
+      <Form name="contact" method="POST" data-netlify="true">
         <Form.Row>
           <Form.Group as={Col} controlId="formGridName">
             <FormLabel>Name</FormLabel>
-            <FormInputs type="name" placeholder="Enter Name" />
+            <FormInputs type="text" name="name" placeholder="Enter Name" />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridTelephone">
@@ -54,26 +54,23 @@ const ContactForm = () => {
           <FormInputs type="email" placeholder="Enter email" />
         </Form.Group>
 
-        <Form.Group controlId="formGridAddress2">
-          <FormLabel>Address 2</FormLabel>
-          <FormInputs type="email" placeholder="Enter email" />
+        <Form.Group controlId="formGridSubject">
+          <FormLabel>Subject</FormLabel>
+          <FormInputs type="text" placeholder="Enter Subject" />
         </Form.Group>
 
         <Form.Row>
-          <Form.Group as={Col} controlId="formGridCity">
-            <FormLabel>City</FormLabel>
-            <FormInputs as="textarea" rows={4} placeholder="Enter email" />
+          <Form.Group as={Col} controlId="formGridMessage">
+            <FormLabel>Message</FormLabel>
+            <FormInputs
+              as="textarea"
+              type="text"
+              rows={4}
+              placeholder="What can we help you with..."
+            />
           </Form.Group>
-
-          {/* <Form.Group as={Col} controlId="formGridZip">
-            <FormLabel>Zip</FormLabel>
-            <FormInputs type="email" placeholder="Enter email" />
-          </Form.Group> */}
         </Form.Row>
 
-        <Form.Group id="formGridCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
         <ButtonContainer>
           <FormButton variant="primary" type="submit">
             Submit

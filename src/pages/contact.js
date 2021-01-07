@@ -11,7 +11,8 @@ const PageStyling = styled("div")`
 `;
 
 const PageHeader = styled("h1")`
-  text-shadow: 0 0 2px darkred, 0 0 2px darkred, 0 0 7px darkred, 0 0 1px darkred;
+  text-shadow: 0 0 2px darkred, 0 0 2px darkred, 0 0 7px darkred,
+    0 0 1px darkred;
   text-decoration: underline;
 `;
 
@@ -35,8 +36,16 @@ const ContactPage = () => {
             <CenteredCol xs={12}>
               <PageHeader>Contact Us at McCarron Auto</PageHeader>
             </CenteredCol>
+            <CenteredCol xs={12}>
+              <ContactText>
+                Message us at McCarron Auto with any questions or to inquire
+                about bringing your vehicle in for servicing
+              </ContactText>
+            </CenteredCol>
             <CenteredCol>
-              <ContactText>Lorem Ipsum dolor sit</ContactText>
+              <ContactText>
+                You can also reach us by phone at 413-652-4132
+              </ContactText>
             </CenteredCol>
           </Row>
         </Container>
