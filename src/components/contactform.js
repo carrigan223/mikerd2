@@ -53,18 +53,22 @@ const ContactForm = () => {
 
           <Form.Group as={Col} controlId="formGridTelephone">
             <FormLabel>Telephone</FormLabel>
-            <FormInputs type="telephone" placeholder="Enter Telephone Number" />
+            <FormInputs
+              type="telephone"
+              name="telephone"
+              placeholder="Enter Telephone Number"
+            />
           </Form.Group>
         </Form.Row>
 
         <Form.Group controlId="formGridEmail">
           <FormLabel>Email</FormLabel>
-          <FormInputs type="email" placeholder="Enter email" />
+          <FormInputs type="email" name="email" placeholder="Enter email" />
         </Form.Group>
 
         <Form.Group controlId="formGridSubject">
           <FormLabel>Subject</FormLabel>
-          <FormInputs type="text" placeholder="Enter Subject" />
+          <FormInputs type="text" name="subject" placeholder="Enter Subject" />
         </Form.Group>
 
         <Form.Row>
@@ -72,6 +76,7 @@ const ContactForm = () => {
             <FormLabel>Message</FormLabel>
             <FormInputs
               as="textarea"
+              name="message"
               type="text"
               rows={4}
               placeholder="What can we help you with..."
