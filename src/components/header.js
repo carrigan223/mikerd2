@@ -6,6 +6,12 @@ import { Navbar, Nav } from "react-bootstrap";
 const CustomNav = styled(Navbar)`
   box-shadow: -2px 8px 8px -4px #999;
   padding: 1.5rem;
+  background:
+		/* linear-gradient(-135deg, rgb(0, 0, 0) 10%, transparent),
+		repeating-linear-gradient(45deg, rgba(134, 40, 40, 1) 0%, rgba(31, 48, 94, 0.6) 5%, transparent 5%, transparent 10%),
+		repeating-linear-gradient(-45deg, rgba(34, 76, 152, 0.4) 0%, rgba(31, 48, 94, 0.5) 5%, transparent 5%, transparent 10%);
+	background-color: rgba(34, 76, 152, 0.25); */
+
 `;
 
 const NavLink = styled(Link)`
