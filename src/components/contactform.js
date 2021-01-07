@@ -43,7 +43,7 @@ const ContactForm = () => {
         data-netlify-honeypot="bot-field"
       >
         {/* You still need to add the hidden input with the form name to your JSX form */}
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name form-email" value="contact" />
 
         <Form.Row>
           <Form.Group as={Col} controlId="formGridName">
