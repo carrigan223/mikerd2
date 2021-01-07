@@ -1,13 +1,6 @@
 import * as React from "react";
-import Layout from "../components/layout";
 import styled from "@emotion/styled";
 import { Form, Container, Row, Col, Button } from "react-bootstrap";
-
-const PageStyling = styled("div")`
-  background-image: linear-gradient(to bottom, black, white);
-  padding-bottom: 4rem;
-  padding-top: 10rem;
-`;
 
 const FormContainer = styled(Container)`
   padding: 2rem;
@@ -17,7 +10,7 @@ const FormInputs = styled(Form.Control)`
   background-color: whitesmoke;
   border-radius: 0;
   border-width: 1px;
-  border-color: red;
+  border-color: darkred;
   box-shadow: 1px 2px 2px 2px black;
 `;
 
@@ -27,7 +20,7 @@ const FormLabel = styled(Form.Label)`
 `;
 
 const FormButton = styled(Button)`
-  background-color: red;
+  background-color: darkred;
   border: none;
   border-radius: 0;
   box-shadow: 1px 2px 2px 2px black;
@@ -69,13 +62,13 @@ const ContactForm = () => {
         <Form.Row>
           <Form.Group as={Col} controlId="formGridCity">
             <FormLabel>City</FormLabel>
-            <FormInputs type="email" placeholder="Enter email" />
+            <FormInputs as="textarea" rows={4} placeholder="Enter email" />
           </Form.Group>
 
-          <Form.Group as={Col} controlId="formGridZip">
+          {/* <Form.Group as={Col} controlId="formGridZip">
             <FormLabel>Zip</FormLabel>
             <FormInputs type="email" placeholder="Enter email" />
-          </Form.Group>
+          </Form.Group> */}
         </Form.Row>
 
         <Form.Group id="formGridCheckbox">

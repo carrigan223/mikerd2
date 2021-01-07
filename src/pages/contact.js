@@ -11,9 +11,8 @@ const PageStyling = styled("div")`
 `;
 
 const PageHeader = styled("h1")`
-  text-shadow: 0 0 2px red, 0 0 2px red, 0 0 7px red, 0 0 1px red;
+  text-shadow: 0 0 2px darkred, 0 0 2px darkred, 0 0 7px darkred, 0 0 1px darkred;
   text-decoration: underline;
-  
 `;
 
 const ContactText = styled("text")`
@@ -23,8 +22,8 @@ const ContactText = styled("text")`
 `;
 
 const CenteredCol = styled(Col)`
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 `;
 
 const ContactPage = () => {
@@ -36,9 +35,9 @@ const ContactPage = () => {
             <CenteredCol xs={12}>
               <PageHeader>Contact Us at McCarron Auto</PageHeader>
             </CenteredCol>
-            <Col>
+            <CenteredCol>
               <ContactText>Lorem Ipsum dolor sit</ContactText>
-            </Col>
+            </CenteredCol>
           </Row>
         </Container>
         <ContactForm />

@@ -5,6 +5,7 @@ import { Navbar, Nav } from "react-bootstrap";
 
 const CustomNav = styled(Navbar)`
   box-shadow: -2px 8px 8px -4px #999;
+  padding: 1.5rem;
 `;
 
 const NavLink = styled(Link)`
@@ -39,7 +40,7 @@ export default function Header() {
     <CustomNav sticky="top" bg="light" expand="lg">
       <Navbar.Brand href="#home">
         <TitleLink to="/">
-          <h4>McCarron Auto</h4>
+          <h2>McCarron Auto</h2>
         </TitleLink>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -38,7 +38,7 @@ const TextBox = styled("div")`
   }
 
   h3 {
-    color: red;
+    color: rgb(180,37,37);
     font-family: "Oswald";
     text-shadow: 2px 2px 5px black;
   }

@@ -14,7 +14,7 @@ const ContainerOne = styled("div")`
   margin: 2rem;
   padding: 100px;
   text-align: center;
-  border-radius: 3%;
+  //border-radius: 3%;
 `;
 
 const ContainerTwo = styled("div")`
@@ -52,16 +52,17 @@ const IndexPage = () => {
   `);
   return (
     <>
-      <div className="d-none d-sm-block">
-        <Hero />
-      </div>
       <Layout>
+        <div className="d-none d-sm-block">
+          <Hero />
+        </div>
+
         <Container fluid>
           <Row>
             <Col
               css={css`
-                background-color: black;
-                background-image: linear-gradient(to bottom, black, white);
+                //background-color: black;
+                //background-image: linear-gradient(to bottom, black, white);
               `}
             >
               <ContainerOne>Hello world!2 </ContainerOne>
