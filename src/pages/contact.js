@@ -45,7 +45,7 @@ const ContactPage = () => {
             <CenteredCol>
               <ContactText>
                 You can also reach us by phone at{" "}
-                <a href="tel:+4136524132">413-652-4132</a>
+                <a href="tel:+14136524132">413-652-4132</a>
               </ContactText>
             </CenteredCol>
           </Row>
