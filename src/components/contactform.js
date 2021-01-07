@@ -35,49 +35,70 @@ const ButtonContainer = styled(Row)`
 
 const ContactForm = () => {
   return (
-    <FormContainer>
-      <Form name="contact" method="POST" data-netlify="true">
-        <Form.Row>
-          <Form.Group as={Col} controlId="formGridName">
-            <FormLabel>Name</FormLabel>
-            <FormInputs type="text" name="name" placeholder="Enter Name" />
-          </Form.Group>
+    // <FormContainer>
+    //   <Form name="contact" method="POST" data-netlify="true">
+    //     <Form.Row>
+    //       <Form.Group as={Col} controlId="formGridName">
+    //         <FormLabel>Name</FormLabel>
+    //         <FormInputs type="text" name="name" placeholder="Enter Name" />
+    //       </Form.Group>
 
-          <Form.Group as={Col} controlId="formGridTelephone">
-            <FormLabel>Telephone</FormLabel>
-            <FormInputs type="telephone" placeholder="Enter Telephone Number" />
-          </Form.Group>
-        </Form.Row>
+    //       <Form.Group as={Col} controlId="formGridTelephone">
+    //         <FormLabel>Telephone</FormLabel>
+    //         <FormInputs type="telephone" placeholder="Enter Telephone Number" />
+    //       </Form.Group>
+    //     </Form.Row>
 
-        <Form.Group controlId="formGridEmail">
-          <FormLabel>Email</FormLabel>
-          <FormInputs type="email" placeholder="Enter email" />
-        </Form.Group>
+    //     <Form.Group controlId="formGridEmail">
+    //       <FormLabel>Email</FormLabel>
+    //       <FormInputs type="email" placeholder="Enter email" />
+    //     </Form.Group>
 
-        <Form.Group controlId="formGridSubject">
-          <FormLabel>Subject</FormLabel>
-          <FormInputs type="text" placeholder="Enter Subject" />
-        </Form.Group>
+    //     <Form.Group controlId="formGridSubject">
+    //       <FormLabel>Subject</FormLabel>
+    //       <FormInputs type="text" placeholder="Enter Subject" />
+    //     </Form.Group>
 
-        <Form.Row>
-          <Form.Group as={Col} controlId="formGridMessage">
-            <FormLabel>Message</FormLabel>
-            <FormInputs
-              as="textarea"
-              type="text"
-              rows={4}
-              placeholder="What can we help you with..."
-            />
-          </Form.Group>
-        </Form.Row>
+    //     <Form.Row>
+    //       <Form.Group as={Col} controlId="formGridMessage">
+    //         <FormLabel>Message</FormLabel>
+    //         <FormInputs
+    //           as="textarea"
+    //           type="text"
+    //           rows={4}
+    //           placeholder="What can we help you with..."
+    //         />
+    //       </Form.Group>
+    //     </Form.Row>
 
-        <ButtonContainer>
-          <FormButton variant="primary" type="submit">
-            Submit
-          </FormButton>
-        </ButtonContainer>
-      </Form>
-    </FormContainer>
+    //     <ButtonContainer>
+    //       <FormButton variant="primary" type="submit">
+    //         Submit
+    //       </FormButton>
+    //     </ButtonContainer>
+    //   </Form>
+    // </FormContainer>
+
+    <form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
   );
 };
 
