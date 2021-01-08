@@ -6,16 +6,18 @@ import Layout from "../components/layout";
 import Hero from "../components/hero";
 import { css } from "@emotion/react";
 import { Container, Row, Col } from "react-bootstrap";
+import usePosts from "../hooks/use-posts";
+import PostPreview from "../components/postpreview";
 
-const ContainerOne = styled("div")`
-  background-color: white;
-  border: 2px black;
-  box-shadow: 2px 8px 8px 4px #999;
-  margin: 2rem;
-  padding: 100px;
-  text-align: center;
-  //border-radius: 3%;
-`;
+// const ContainerOne = styled("div")`
+//   background-color: white;
+//   border: 2px black;
+//   box-shadow: 2px 8px 8px 4px #999;
+//   margin: 2rem;
+//   padding: 100px;
+//   text-align: center;
+//   //border-radius: 3%;
+// `;
 
 const ContainerTwo = styled("div")`
   //background-color: white;
@@ -39,6 +41,8 @@ const ImageBackground = styled(BackgroundImage)`
 `;
 
 const IndexPage = () => {
+  const posts = usePosts();
+
   const { image } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "american-flag.jpg" }) {
@@ -60,13 +64,27 @@ const IndexPage = () => {
         <Container fluid>
           <Row>
             <Col
+              xs={6}
               css={css`
                 //background-color: black;
                 //background-image: linear-gradient(to bottom, black, white);
+                display: flex;
+                justify-content: center;
+                padding-top: 1.5rem;
               `}
             >
-              <ContainerOne>Hello world!2 </ContainerOne>
-              <ContainerOne />
+              <div
+                css={css`
+                  padding: 2rem;
+                  margin-left: auto;
+                `}
+              >
+                <h2>Tutorials</h2>
+
+                {posts.map((post) => (
+                  <PostPreview key={post.slug} post={post} />
+                ))}
+              </div>
             </Col>
             <Col>
               <ContainerTwo>
