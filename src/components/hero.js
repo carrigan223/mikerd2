@@ -38,7 +38,7 @@ const TextBox = styled("div")`
   }
 
   h3 {
-    color: rgb(180,37,37);
+    color: rgb(180, 37, 37);
     font-family: "Oswald";
     text-shadow: 2px 2px 5px black;
   }
@@ -55,9 +55,9 @@ const TextBox = styled("div")`
 `;
 
 const Hero = () => {
-  const { image } = useStaticQuery(graphql`
+  const { flag } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "chevy_nova.jpg" }) {
+      flag: file(relativePath: { eq: "chevy_nova.jpg" }) {
         sharp: childImageSharp {
           fluid(quality: 100, grayscale: true) {
             ...GatsbyImageSharpFluid_withWebp
@@ -69,7 +69,11 @@ const Hero = () => {
 
   return (
     <ImageContainer fluid>
-      <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
+      <ImageBackground
+        Tag="section"
+        fluid={flag.sharp.fluid}
+        fadeIn="soft"
+      >
         <Col>
           <TextBox>
             <h1>McCarron Auto</h1>
