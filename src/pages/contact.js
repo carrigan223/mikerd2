@@ -5,7 +5,19 @@ import { Container, Row, Col } from "react-bootstrap";
 import ContactForm from "../components/contactform";
 
 const PageStyling = styled("div")`
-  background-image: linear-gradient(to bottom, black, white);
+  background: rgb(69, 66, 66);
+  background: linear-gradient(
+    135deg,
+    rgba(69, 66, 66, 1) 5%,
+    rgba(131, 98, 98, 1) 20%,
+    rgba(201, 148, 148, 1) 32%,
+    rgba(228, 202, 202, 1) 44%,
+    rgba(231, 187, 187, 1) 53%,
+    rgba(231, 142, 142, 1) 67%,
+    rgba(204, 84, 84, 1) 78%,
+    rgba(222, 64, 64, 1) 86%,
+    rgba(218, 39, 39, 1) 96%
+  );
   padding-bottom: 4rem;
   padding-top: 10rem;
 `;
@@ -14,12 +26,15 @@ const PageHeader = styled("h1")`
   text-shadow: 0 0 2px darkred, 0 0 2px darkred, 0 0 7px darkred,
     0 0 1px darkred;
   text-decoration: underline;
+  color: white;
 `;
 
 const ContactText = styled("text")`
   font-family: "Oswald";
   font-size: 1rem;
   color: white;
+  text-shadow: 0 0 2px red, 0 0 2px red, 0 0 7px red, 0 0 1px red;
+
 `;
 
 const CenteredCol = styled(Col)`

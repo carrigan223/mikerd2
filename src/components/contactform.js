@@ -17,6 +17,7 @@ const FormInputs = styled(Form.Control)`
 const FormLabel = styled(Form.Label)`
   color: white;
   font-family: "oswald";
+  text-shadow: 0 0 2px red, 0 0 2px red, 0 0 7px red, 0 0 1px red;
 `;
 
 const FormButton = styled(Button)`

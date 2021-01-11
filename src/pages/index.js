@@ -29,7 +29,7 @@ const ContactButton = styled(Link)`
   font-size: 1.5rem;
   padding: 10px;
   color: black;
-  margin-left: 5.5rem;
+  //margin-left: 5.5rem;
   //margin-right: auto;
   &:hover {
     background-color: blue;
@@ -61,7 +61,7 @@ const ImageBackground = styled(BackgroundImage)`
 const IndexPage = () => {
   const posts = usePosts();
 
-  const { flag, ase } = useStaticQuery(graphql`
+  const { ase, flag } = useStaticQuery(graphql`
     query {
       flag: file(relativePath: { eq: "american-flag.jpg" }) {
         sharp: childImageSharp {
@@ -79,6 +79,8 @@ const IndexPage = () => {
       }
     }
   `);
+
+  console.log();
 
   return (
     <>
@@ -131,7 +133,16 @@ const IndexPage = () => {
                   McCarron Auto for your Automotive needs you can rest assured
                   your vehicles in the best hands.
                 </h5>
-                <ContactButton to="/contact" className="d-md-none">Contact Us</ContactButton>
+                <div
+                  css={css`
+                    display: flex;
+                    justify-content: center;
+                  `}
+                >
+                  <ContactButton to="/contact" className="d-md-none">
+                    Contact Us
+                  </ContactButton>
+                </div>
               </div>
             </Col>
           </Row>

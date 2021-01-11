@@ -2,6 +2,7 @@ import React from "react";
 import { Global, css } from "@emotion/react"; //emotion/core was renamed emotion/react
 import Helmet from "react-helmet";
 import Header from "./header";
+import Footer from "./footer";
 
 const Layout = ({ children }) => {
   return (
@@ -25,6 +26,16 @@ const Layout = ({ children }) => {
               margin-top: 0.5rem;
             }
           }
+
+          a {
+            color: black;
+            font-family: "Racing Sans One";
+
+            :hover {
+              color: white;
+              text-shadow: 0 0 2px red, 0 0 2px red, 0 0 7px red, 0 0 1px red;
+            }
+          }
         `}
       />
       <Helmet>
@@ -33,6 +44,7 @@ const Layout = ({ children }) => {
       </Helmet>
       <Header />
       <main>{children}</main>
+      <Footer />
     </>
   );
 };

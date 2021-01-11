@@ -15,7 +15,6 @@ const usePosts = () => {
       }
     }
   `);
-
   return data.allMdx.nodes.map((post) => ({
     title: post.frontmatter.title,
     author: post.frontmatter.author,
