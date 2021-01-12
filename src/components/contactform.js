@@ -7,17 +7,18 @@ const FormContainer = styled(Container)`
 `;
 
 const FormInputs = styled(Form.Control)`
-  background-color: whitesmoke;
+  background-color: white;
   border-radius: 0;
   border-width: 1px;
   border-color: darkred;
-  box-shadow: 1px 2px 2px 2px black;
+  box-shadow:  3px 3px 3px #cda0a0;
 `;
 
 const FormLabel = styled(Form.Label)`
   color: white;
   font-family: "oswald";
   text-shadow: 0 0 2px red, 0 0 2px red, 0 0 7px red, 0 0 1px red;
+  font-size: 1.25rem;
 `;
 
 const FormButton = styled(Button)`
@@ -28,6 +29,10 @@ const FormButton = styled(Button)`
   font-family: "Racing Sans One";
   text-shadow: 5px 1px 3px black;
   font-size: 1.5rem;
+
+  :hover {
+    background-color: black;
+  }
 `;
 
 const ButtonContainer = styled(Row)`
@@ -49,7 +54,7 @@ const ContactForm = () => {
         <Form.Row>
           <Form.Group as={Col} controlId="formGridName">
             <FormLabel>Name</FormLabel>
-            <FormInputs type="text" name="name" placeholder="Enter Name" />
+            <FormInputs type="text" name="name" placeholder="Name" />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridTelephone">
@@ -57,19 +62,19 @@ const ContactForm = () => {
             <FormInputs
               type="telephone"
               name="telephone"
-              placeholder="Enter Telephone Number"
+              placeholder="Telephone"
             />
           </Form.Group>
         </Form.Row>
 
         <Form.Group controlId="formGridEmail">
           <FormLabel>Email</FormLabel>
-          <FormInputs type="email" name="email" placeholder="Enter email" />
+          <FormInputs type="email" name="email" placeholder="Email" />
         </Form.Group>
 
         <Form.Group controlId="formGridSubject">
           <FormLabel>Subject</FormLabel>
-          <FormInputs type="text" name="subject" placeholder="Enter Subject" />
+          <FormInputs type="text" name="subject" placeholder="Subject" />
         </Form.Group>
 
         <Form.Row>

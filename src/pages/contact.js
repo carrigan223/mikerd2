@@ -26,6 +26,8 @@ const PageHeader = styled("h1")`
     0 0 1px darkred;
   text-decoration: underline;
   color: white;
+  margin-left: 10%;
+  margin-right: 10%;
 `;
 
 const ContactText = styled("text")`
@@ -40,25 +42,36 @@ const CenteredCol = styled(Col)`
   justify-content: center;
 `;
 
+const PhoneNum = styled("a")`
+  display: flex;
+  justify-content: center;
+`;
+
+const TextContainer = styled("div")`
+  display: flex;
+  justify-content: center;
+`;
+
 const ContactPage = () => {
   return (
     <Layout>
       <PageStyling>
         <Container>
           <Row>
-            <CenteredCol xs={12}>
+            <CenteredCol md={12}>
               <PageHeader>Contact Us at McCarron Auto</PageHeader>
             </CenteredCol>
-            <CenteredCol xs={12}>
+            <CenteredCol xs={{ span: 6, offset: 3 }}>
               <ContactText>
-                Message us at McCarron Auto with any questions or to inquire
-                about bringing your vehicle in for servicing
-              </ContactText>
-            </CenteredCol>
-            <CenteredCol>
-              <ContactText>
-                You can also reach us by phone at{" "}
-                <a href="tel:+14136524132">413-652-4132</a>
+                <TextContainer>
+                  Message us at McCarron Auto with any questions or to inquire
+                  about bringing{" "}
+                  {/* </TextContainer>
+                <TextContainer> */}
+                  your vehicle in for servicing, or you can also reach us by
+                  phone at
+                </TextContainer>
+                <PhoneNum href="tel:+14136524132">413-652-4132</PhoneNum>
               </ContactText>
             </CenteredCol>
           </Row>
