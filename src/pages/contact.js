@@ -6,17 +6,16 @@ import ContactForm from "../components/contactform";
 
 const PageStyling = styled("div")`
   background: rgb(69, 66, 66);
+  background: rgb(25, 24, 24);
+  background: rgb(25, 24, 24);
   background: linear-gradient(
-    135deg,
-    rgba(69, 66, 66, 1) 5%,
-    rgba(131, 98, 98, 1) 20%,
-    rgba(201, 148, 148, 1) 32%,
-    rgba(228, 202, 202, 1) 44%,
-    rgba(231, 187, 187, 1) 53%,
-    rgba(231, 142, 142, 1) 67%,
-    rgba(204, 84, 84, 1) 78%,
-    rgba(222, 64, 64, 1) 86%,
-    rgba(218, 39, 39, 1) 96%
+    159deg,
+    rgba(25, 24, 24, 1) 0%,
+    rgba(78, 25, 25, 1) 13%,
+    rgba(91, 21, 21, 1) 21%,
+    rgba(175, 129, 129, 1) 35%,
+    rgba(254, 241, 241, 1) 54%,
+    rgba(255, 255, 255, 1) 61%
   );
   padding-bottom: 4rem;
   padding-top: 10rem;
@@ -34,7 +33,6 @@ const ContactText = styled("text")`
   font-size: 1rem;
   color: white;
   text-shadow: 0 0 2px red, 0 0 2px red, 0 0 7px red, 0 0 1px red;
-
 `;
 
 const CenteredCol = styled(Col)`

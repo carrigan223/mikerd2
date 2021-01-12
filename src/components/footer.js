@@ -19,6 +19,7 @@ const StyledFooter = styled("footer")`
   ); */
   color: black;
   padding: 1.75rem;
+
 `;
 
 const FooterCol = styled(Col)`
@@ -26,6 +27,7 @@ const FooterCol = styled(Col)`
   justify-content: center;
   font-family: "Oswald";
   font-size: 0.85rem;
+  border-top: 3px solid #ddd;
 `;
 
 const Footer = () => {
