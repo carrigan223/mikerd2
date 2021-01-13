@@ -1,25 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
-import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Row, Col } from "react-bootstrap";
 import { HiOutlineMail } from "@react-icons/all-files/hi/HiOutlineMail";
 import { HiOutlinePhone } from "@react-icons/all-files/hi/HiOutlinePhone";
 
 const StyledFooter = styled("footer")`
-  /* background: rgb(69, 66, 66);
-  background: linear-gradient(
-    135deg,
-    rgba(69, 66, 66, 1) 5%,
-    rgba(131, 98, 98, 1) 20%,
-    rgba(201, 148, 148, 1) 32%,
-    rgba(228, 202, 202, 1) 44%,
-    rgba(231, 187, 187, 1) 53%,
-    rgba(231, 142, 142, 1) 67%,
-    rgba(204, 84, 84, 1) 78%,
-    rgba(222, 64, 64, 1) 86%,
-    rgba(218, 39, 39, 1) 96%
-  ); */
   color: black;
   padding: 1.75rem;
 `;
@@ -50,7 +36,28 @@ const StyledOutlinePhone = styled(HiOutlinePhone)`
   margin: 0.5rem;
 `;
 
+const FooterTitle = styled("text")`
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  font-family: "Racing Sans One";
+`;
 
+const CreatorContainer = styled("div")`
+  padding-top: 1rem;
+  font-size: 0.75rem;
+`;
+
+const CreatorText = styled("text")`
+  display: flex;
+  justify-content: center;
+`;
+
+const ContactLinks = styled("a")`
+  :hover {
+    color: red;
+  }
+`;
 
 const Footer = () => {
   return (
@@ -58,16 +65,7 @@ const Footer = () => {
       <Row>
         <FooterCol md={4}>
           <div>
-            <text
-              css={css`
-                margin-bottom: 0;
-                display: flex;
-                justify-content: center;
-                font-family: "Racing Sans One";
-              `}
-            >
-              McCarron Auto
-            </text>
+            <FooterTitle>McCarron Auto</FooterTitle>
             <StyledLinks>
               <FooterNav to="/"> Home</FooterNav> |
               <FooterNav to="/about"> About</FooterNav> |
@@ -77,33 +75,19 @@ const Footer = () => {
           </div>
         </FooterCol>
         <FooterCol md={4}>
-          <StyledHiOutlineMail /> |
-          <StyledOutlinePhone />
+          <ContactLinks href="mailto: mccarronauto@yahoo.com">
+            <StyledHiOutlineMail />
+          </ContactLinks>
+          |
+          <ContactLinks href="tel:+14136524132">
+            <StyledOutlinePhone />
+          </ContactLinks>
         </FooterCol>
         <FooterCol md={4}>
-          <div
-            css={css`
-              padding-top: 1rem;
-              font-size: 0.75rem;
-            `}
-          >
-            <text
-              css={css`
-                display: flex;
-                justify-content: center;
-              `}
-            >
-              SITE BY CARRIGAN WEB DESIGN
-            </text>
-            <text
-              css={css`
-                display: flex;
-                justify-content: center;
-              `}
-            >
-              ANDREW CARRIGAN 2020©
-            </text>
-          </div>
+          <CreatorContainer>
+            <CreatorText>SITE BY CARRIGAN WEB DESIGN</CreatorText>
+            <CreatorText>ANDREW CARRIGAN 2020©</CreatorText>
+          </CreatorContainer>
         </FooterCol>
       </Row>
     </StyledFooter>
