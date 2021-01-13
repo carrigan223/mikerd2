@@ -166,9 +166,11 @@ const IndexPage = () => {
                   padding: 1rem;
                 `}
               >
-                <h1>Tutorials</h1>
+                <Link to="/tutorials">
+                  <h1>Tutorials</h1>
+                </Link>
 
-                {posts.map((post) => (
+                {posts.slice(0, 2).map((post) => (
                   <PostPreview key={post.slug} post={post} />
                 ))}
               </div>

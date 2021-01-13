@@ -43,9 +43,9 @@ const TitleLink = styled(Link)`
 export default function Header() {
   return (
     <CustomNav sticky="top" bg="light" expand="lg">
-        <TitleLink to="/">
-          <h2>McCarron Auto</h2>
-        </TitleLink>
+      <TitleLink to="/">
+        <h2>McCarron Auto</h2>
+      </TitleLink>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
@@ -57,6 +57,9 @@ export default function Header() {
           </NavLink>
           <NavLink to="/contact" activeClassName="current-page">
             Contact
+          </NavLink>
+          <NavLink to="/tutorials" activeClassName="current-page">
+            Tutorials
           </NavLink>
         </Nav>
       </Navbar.Collapse>
