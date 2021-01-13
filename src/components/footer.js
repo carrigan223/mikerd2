@@ -1,7 +1,10 @@
 import React from "react";
+import { Link } from "gatsby";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Row, Col } from "react-bootstrap";
+import { HiOutlineMail } from "@react-icons/all-files/hi/HiOutlineMail";
+import { HiOutlinePhone } from "@react-icons/all-files/hi/HiOutlinePhone";
 
 const StyledFooter = styled("footer")`
   /* background: rgb(69, 66, 66);
@@ -19,36 +22,63 @@ const StyledFooter = styled("footer")`
   ); */
   color: black;
   padding: 1.75rem;
-
 `;
 
 const FooterCol = styled(Col)`
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: "Oswald";
   font-size: 0.85rem;
   border-top: 3px solid #ddd;
+  padding-top: 1rem;
 `;
+
+const StyledLinks = styled("p")``;
+
+const FooterNav = styled(Link)`
+  font-family: "Oswald";
+`;
+
+const StyledHiOutlineMail = styled(HiOutlineMail)`
+  font-size: 1rem;
+  margin: 0.5rem;
+`;
+
+const StyledOutlinePhone = styled(HiOutlinePhone)`
+  font-size: 1rem;
+  margin: 0.5rem;
+`;
+
+
 
 const Footer = () => {
   return (
     <StyledFooter>
       <Row>
         <FooterCol md={4}>
-          <text>
-            <h5
+          <div>
+            <text
               css={css`
                 margin-bottom: 0;
+                display: flex;
+                justify-content: center;
+                font-family: "Racing Sans One";
               `}
             >
               McCarron Auto
-            </h5>
-            <br />
-            Hello world
-          </text>
+            </text>
+            <StyledLinks>
+              <FooterNav to="/"> Home</FooterNav> |
+              <FooterNav to="/about"> About</FooterNav> |
+              <FooterNav to="#"> Tutorials</FooterNav> |
+              <FooterNav to="/contact"> Contact</FooterNav>
+            </StyledLinks>
+          </div>
         </FooterCol>
         <FooterCol md={4}>
-          <text>Awesome text</text>
+          <StyledHiOutlineMail /> |
+          <StyledOutlinePhone />
         </FooterCol>
         <FooterCol md={4}>
           <div
@@ -65,7 +95,14 @@ const Footer = () => {
             >
               SITE BY CARRIGAN WEB DESIGN
             </text>
-            <text>COPYRIGHT ANDREW CARRIGAN 2020©</text>
+            <text
+              css={css`
+                display: flex;
+                justify-content: center;
+              `}
+            >
+              ANDREW CARRIGAN 2020©
+            </text>
           </div>
         </FooterCol>
       </Row>
