@@ -31,16 +31,17 @@ const TextBox = styled("div")`
 
   h1 {
     text-shadow: 5px 1px 3px black;
-    font-size: 3.55rem;
+    font-size: 6rem;
     color: white;
     margin-top: 2rem;
     text-decoration: underline;
   }
 
   h3 {
-    color: rgb(180, 37, 37);
+    margin-top: 1.5rem;
+    color: white;
     font-family: "Oswald";
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px red;
   }
 
   p,
