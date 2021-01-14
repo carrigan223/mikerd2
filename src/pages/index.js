@@ -10,16 +10,6 @@ import usePosts from "../hooks/use-posts";
 import PostPreview from "../components/postpreview";
 import Img from "gatsby-image";
 
-// const ContainerOne = styled("div")`
-//   background-color: white;
-//   border: 2px black;
-//   box-shadow: 2px 8px 8px 4px #999;
-//   margin: 2rem;
-//   padding: 100px;
-//   text-align: center;
-//   //border-radius: 3%;
-// `;
-
 const ContactButton = styled(Link)`
   border: 3px black;
   border-radius: 0;
@@ -29,8 +19,6 @@ const ContactButton = styled(Link)`
   font-size: 1.5rem;
   padding: 10px;
   color: black;
-  //margin-left: 5.5rem;
-  //margin-right: auto;
   &:hover {
     background-color: blue;
     color: white;
@@ -38,13 +26,12 @@ const ContactButton = styled(Link)`
 `;
 
 const ContainerTwo = styled("div")`
-  //background-color: red;
-  //display: flex;
   border: 2px black;
   box-shadow: 1px 8px 8px 4px #999;
   margin: 1rem;
   text-align: center;
   justify-content: center;
+  border-radius: 50%;
 `;
 
 const ImageBackground = styled(BackgroundImage)`
@@ -52,7 +39,6 @@ const ImageBackground = styled(BackgroundImage)`
   background-size: cover;
   height: 60vh;
   max-width: 100vw;
-
   + * {
     margin-top: 0;
   }
@@ -61,16 +47,23 @@ const ImageBackground = styled(BackgroundImage)`
 const IndexPage = () => {
   const posts = usePosts();
 
-  const { ase, flag } = useStaticQuery(graphql`
+  const { ase, flag, army } = useStaticQuery(graphql`
     query {
       flag: file(relativePath: { eq: "american-flag.jpg" }) {
+        sharp: childImageSharp {
+          fluid(quality: 100, grayscale: true) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      ase: file(relativePath: { eq: "ase.jpg" }) {
         sharp: childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      ase: file(relativePath: { eq: "ase.jpg" }) {
+      army: file(relativePath: { eq: "Army_logo.png" }) {
         sharp: childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
@@ -182,18 +175,41 @@ const IndexPage = () => {
             >
               <ContainerTwo>
                 <ImageBackground
+                  style={{
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                  }}
                   Tag="section"
                   fluid={flag.sharp.fluid}
                   fadeIn="soft"
                 >
-                  <h1
+                  <div
                     css={css`
-                      color: white;
-                      text-shadow: 2px 2px 5px blue;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      padding: 2rem;
                     `}
                   >
-                    Hello world
-                  </h1>
+                    {" "}
+                    <Img
+                      fluid={army.sharp.fluid}
+                      css={css`
+                        height: 30%;
+                        width: 30%;
+                      `}
+                    />
+                    <h3
+                      css={css`
+                        text-shadow: 0 0 2px yellow, 0 0 2px yellow,
+                          0 0 7px yellow, 0 0 1px yellow;
+                        padding: 1rem;
+                      `}
+                    >
+                      Proudly Veteran Owned and Operated
+                    </h3>
+                  </div>
                 </ImageBackground>
               </ContainerTwo>
             </Col>
