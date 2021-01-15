@@ -4,6 +4,7 @@ import { css } from "@emotion/react";
 import { Link } from "gatsby";
 import Image from "gatsby-image";
 import Readlink from "../components/read-link";
+import { Container, Row, Col } from "react-bootstrap";
 
 const BlogArticle = styled.article`
   border-bottom: 1px solid #ddd;
@@ -24,17 +25,19 @@ const ImageLink = styled(Link)`
 const PostPreview = ({ post }) => {
   return (
     <BlogArticle>
-      <ImageLink to={`/${post.slug}`}>
-        <Image
-          fluid={post.image.sharp.fluid}
-          css={css`
-            * {
-              margin-top: 0;
-            }
-          `}
-          alt={post.title}
-        />
-      </ImageLink>
+      <Row css={css`padding: .5rem;`}>
+        <ImageLink to={`/${post.slug}`}>
+          <Image
+            fluid={post.image.sharp.fluid}
+            css={css`
+              * {
+                margin-top: 0;
+              }
+            `}
+            alt={post.title}
+          />
+        </ImageLink>
+      </Row>
       <div
         css={css`
           padding-top: 1rem;
