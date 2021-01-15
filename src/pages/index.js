@@ -73,7 +73,6 @@ const IndexPage = () => {
     }
   `);
 
-  console.log();
 
   return (
     <>
