@@ -21,7 +21,7 @@ const TutorialPage = () => {
             >
               <h1>Tutorials</h1>
 
-              {posts.slice(0, 2).map((post) => (
+              {posts.map((post) => (
                 <PostPreview key={post.slug} post={post} />
               ))}
             </div>

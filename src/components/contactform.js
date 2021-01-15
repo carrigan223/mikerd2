@@ -31,7 +31,7 @@ const FormButton = styled(Button)`
   font-size: 1.5rem;
 
   :hover {
-    background-color: black;
+    background-color: darkgrey;
   }
 `;
 
