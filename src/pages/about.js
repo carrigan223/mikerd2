@@ -14,16 +14,20 @@ const StyledCol = styled(Col)`
   padding-top: 1.5rem;
 `;
 
+const StyledColText = styled(Col)`
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const StyledRow = styled(Row)`
+  padding-top: 1.5rem;
+`;
+
 const AboutPage = () => {
-  const { soldier, mike, family } = useStaticQuery(graphql`
+  const { soldier, family } = useStaticQuery(graphql`
     query {
-      mike: file(relativePath: { eq: "mike-sofie.jpeg" }) {
-        sharp: childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
       soldier: file(relativePath: { eq: "soldier-pose.jpeg" }) {
         sharp: childImageSharp {
           fluid(quality: 100) {
@@ -44,73 +48,44 @@ const AboutPage = () => {
   return (
     <Layout>
       <Container>
-        <Row>
-          <StyledCol xs={12}>
-            <div
+        <StyledRow>
+          <StyledCol md={4}>
+            <Img
+              fluid={soldier.sharp.fluid}
               css={css`
-                display: flex;
-                flex-direction: row;
+                padding: 6.5rem;
+                width: 100%;
+                margin-right: 2rem;
+                box-shadow: 1px 8px 8px 4px #999;
               `}
-            >
-              <StyledText>
-                McCarron Auto is a Berkshire county business owned and operated
-                by Mike McCarron, ASE certified automotive technician. Born and
-                raised in North Adams, Massachusetts to Eugene and Carol
-                McCarron educators and staples of the North Adams community the
-                same values carry through today. An alumni of McCann Technical
-                High School’s automotive department, where following in the
-                footsteps of his parents Mr. McCarron is currently an
-                instructor. With over forty years of professional experience
-                both as an instructor and independent owner/operator you can
-                trust your vehicles in experienced hands.
-              </StyledText>
-              <Img
-                fluid={mike.sharp.fluid}
-                css={css`
-                  width: 100%;
-                  box-shadow: 1px 8px 8px 4px #999;
-                `}
-              />
-            </div>
+            />
           </StyledCol>
-
-          <StyledCol xs={12}>
-            <div
-              css={css`
-                display: flex;
-                flex-direction: row;
-              `}
-            >
-              <Img
-                fluid={soldier.sharp.fluid}
-                css={css`
-                  width: 100%;
-                  margin-right: 2rem;
-                  box-shadow: 1px 8px 8px 4px #999;
-                `}
-              />
-              <div
-                css={css`
-                  display: flex;
-                  align-items: center;
-                `}
-              >
-                <StyledText>
-                  While Mr. McCarron has served the youth of Berkshire County as
-                  an educator he has also faithfully served his country. Sgt.
-                  McCarron has over twenty years of decorated service in the
-                  Army reserves including four tours over seas. While serving
-                  Sgt. McCarron automotive skills served him well in the
-                  position of Motor transport operator who are primarily
-                  responsible for supervising or operating wheel vehicles to
-                  transport personnel and cargo. You can rest assured knowing
-                  the safety of you and your family is in the hands of of the
-                  same individual who helped make sure our troops could do their
-                  job and get home safely.
-                </StyledText>
-              </div>
-            </div>
-          </StyledCol>
+          <StyledColText xs={8}>
+            <StyledText>
+              McCarron Auto is a Berkshire county business owned and operated by
+              Mike McCarron, ASE certified automotive technician. Born and
+              raised in North Adams, Massachusetts to Eugene and Carol McCarron
+              educators and staples of the North Adams community the same values
+              carry through today. An alumni of McCann Technical High School’s
+              automotive department, where following in the footsteps of his
+              parents Mr. McCarron is currently an instructor. With over forty
+              years of professional experience both as an instructor and
+              independent owner/operator you can trust your vehicles in
+              experienced hands.
+            </StyledText>
+            <StyledText>
+              While Mr. McCarron has served the youth of Berkshire County as an
+              educator he has also faithfully served his country. Sgt. McCarron
+              has over twenty years of decorated service in the Army reserves
+              including four tours over seas. While serving Sgt. McCarron
+              automotive skills served him well in the position of Motor
+              transport operator who are primarily responsible for supervising
+              or operating wheel vehicles to transport personnel and cargo. You
+              can rest assured knowing the safety of you and your family is in
+              the hands of of the same individual who helped make sure our
+              troops could do their job and get home safely.
+            </StyledText>
+          </StyledColText>
           <StyledCol xs={12}>
             <div
               css={css`
@@ -146,7 +121,7 @@ const AboutPage = () => {
               </div>
             </div>
           </StyledCol>
-        </Row>
+        </StyledRow>
       </Container>
     </Layout>
   );
