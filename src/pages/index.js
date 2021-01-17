@@ -160,26 +160,15 @@ const IndexPage = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs={12}>
+            <Col md={12}>
               <h3
                 css={css`
                   display: flex;
                   justify-content: center;
                   margin-top: 3rem;
-                  text-decoration: overline;
-                  text-decoration-color: grey;
                 `}
               >
                 Whether classic vehicles or state of the art Hybrids, McCarron
-              </h3>
-              <h3
-                css={css`
-                  display: flex;
-                  justify-content: center;
-                  margin-top: 1rem;
-                  margin-bottom: 2rem;
-                `}
-              >
                 Auto is your up-to-date and enviromently friendly answer
               </h3>
             </Col>
@@ -191,7 +180,7 @@ const IndexPage = () => {
               <Img
                 css={css`
                   height: 10vh;
-                  width: 50vh;
+                  width: 40vh;
                   margin-left: auto;
                   margin-right: auto;
                 `}
