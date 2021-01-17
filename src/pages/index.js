@@ -44,10 +44,18 @@ const ImageBackground = styled(BackgroundImage)`
   }
 `;
 
+const StyledList = styled("div")`
+  display: flex;
+  justify-content: center;
+  font-family: "oswald";
+  font-size: 1.25rem;
+  text-shadow: 3px 2px 2px grey;
+`;
+
 const IndexPage = () => {
   const posts = usePosts();
 
-  const { ase, flag, army } = useStaticQuery(graphql`
+  const { ase, flag, army, electude, safety } = useStaticQuery(graphql`
     query {
       flag: file(relativePath: { eq: "american-flag.jpg" }) {
         sharp: childImageSharp {
@@ -70,9 +78,22 @@ const IndexPage = () => {
           }
         }
       }
+      electude: file(relativePath: { eq: "Electude-logo.png" }) {
+        sharp: childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      safety: file(relativePath: { eq: "safety-pollution.png" }) {
+        sharp: childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `);
-
 
   return (
     <>
@@ -138,6 +159,74 @@ const IndexPage = () => {
               </div>
             </Col>
           </Row>
+          <Row>
+            <Col xs={12}>
+              <h3
+                css={css`
+                  display: flex;
+                  justify-content: center;
+                  margin-top: 3rem;
+                  text-decoration: overline;
+                  text-decoration-color: grey;
+                `}
+              >
+                Whether classic vehicles or state of the art Hybrids, McCarron
+              </h3>
+              <h3
+                css={css`
+                  display: flex;
+                  justify-content: center;
+                  margin-top: 1rem;
+                  margin-bottom: 2rem;
+                `}
+              >
+                Auto is your up-to-date and enviromently friendly answer
+              </h3>
+            </Col>
+            <Col
+              css={css`
+                padding-top: 2rem;
+              `}
+            >
+              <Img
+                css={css`
+                  height: 10vh;
+                  width: 50vh;
+                  margin-left: auto;
+                  margin-right: auto;
+                `}
+                fluid={electude.sharp.fluid}
+                alt="Electude insignia"
+              />
+              <StyledList>
+                <ul>
+                  <li>Electude Hybrid Training</li>
+                  <li>Electude Advanced Automotive Training</li>
+                </ul>
+              </StyledList>
+            </Col>
+            <Col>
+              <Img
+                css={css`
+                  height: 58px;
+                  width: 179px;
+                  margin-top: 1rem;
+                  margin-bottom: 1rem;
+                  margin-left: auto;
+                  margin-right: auto;
+                `}
+                fluid={safety.sharp.fluid}
+                alt="safety and pollution insignia"
+              />
+              <StyledList>
+                <ul>
+                  <li>Automotive Service Pollution Prevention</li>
+                  <li>Automotive Service Safety Training</li>
+                  <li>Hello world</li>
+                </ul>
+              </StyledList>
+            </Col>
+          </Row>
           <Row
             css={css`
               padding-top: 2rem;
@@ -146,8 +235,6 @@ const IndexPage = () => {
             <Col
               md={6}
               css={css`
-                //background-color: orange;
-                //background-image: linear-gradient(to bottom, black, white);
                 display: flex;
                 justify-content: center;
                 padding-top: 1.5rem;
@@ -198,6 +285,7 @@ const IndexPage = () => {
                         height: 30%;
                         width: 30%;
                       `}
+                      alt="Army Logo"
                     />
                     <h3
                       css={css`
