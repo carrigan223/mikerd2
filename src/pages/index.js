@@ -160,12 +160,13 @@ const IndexPage = () => {
             </Col>
           </Row>
           <Row>
-            <Col md={12}>
+            <Col md={{ span: 8, offset: 2 }}>
               <h3
                 css={css`
                   display: flex;
                   justify-content: center;
                   margin-top: 3rem;
+                  //border-right: 1px solid grey;
                 `}
               >
                 Whether classic vehicles or state of the art Hybrids, McCarron
