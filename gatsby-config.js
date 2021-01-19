@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "McCarron Auto",
     description: "The Berskhires most dependable stop for auto care",
-    siteUrl: "https://needstobetheproductionurl.com",
+    siteUrl: "https://mccarronauto.com",
   },
   plugins: [
     {
