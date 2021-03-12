@@ -6,7 +6,6 @@ import { Navbar, Nav } from "react-bootstrap";
 const CustomNav = styled(Navbar)`
   box-shadow: -2px 8px 8px -4px #999;
   padding: 1.5rem;
-  background: ;
 `;
 
 const NavLink = styled(Link)`
