@@ -101,7 +101,7 @@ const AboutPage = () => {
                 can be confident in knowing your choosing a reliable, honest,
                 and experienced automotive technician to keep you and your
                 family safe and on the road.
-              </StyledText>{" "}
+              </StyledText>
               <div
                 css={css`
                   display: flex;
